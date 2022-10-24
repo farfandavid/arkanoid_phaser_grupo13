@@ -1,52 +1,44 @@
-.titulo{
-    
+.titulo {
+
     border-radius: 15px;
     text-align: start;
     font-style: oblique;
     font-size: 200%;
-    margin: 2%;
     color: #e6e6e6;
-    text-shadow: 0 0 5px rgb(199, 24, 97),0 0 15px rgb(199, 24, 97),0 0 30px rgb(199, 24, 97),0 0 5px rgb(199, 24, 97);
+    text-shadow: 0 0 5px rgb(199, 24, 97), 0 0 15px rgb(199, 24, 97), 0 0 30px rgb(199, 24, 97), 0 0 5px rgb(199, 24, 97);
 }
-a{
-    margin: 10%;
+
+
+.link {
+
+    color: whitesmoke;
+    text-shadow: 0 0 5px rgb(199, 24, 97), 0 0 15px rgb(199, 24, 97), 0 0 30px rgb(199, 24, 97), 0 0 5px rgb(199, 24, 97);
     text-decoration: none;
-    color: #d6d6d6;
-    text-shadow: 0 0 3px rgb(199, 24, 97);
-}
-button{
-    margin: 10%;
-    text-decoration: none;
-    font-size: 25px;
-    background-color: #151320;
-    box-shadow: inset 0 0 5px rgb(199, 24, 97), 0 0 5px rgb(199, 24, 97);
+    font-size: 20px;
+    width: auto;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-content: center;
     border-radius: 10px;
-    transition: 0.2;
+    margin-right: 15px;
 }
-button:hover{
-    background:  rgb(199, 24, 97);
-    box-shadow: 0 0 10px  rgb(199, 24, 97), 0 0 40px  rgb(199, 24, 97), 0 0 80px  rgb(199, 24, 97);
-}
-.caja{
+
+
+
+.caja {
     display: flex;
-    flex-direction: row;
-    margin: 6%;
-    justify-content: space-around;
 }
-.menu{
+
+.menu {
     display: inline;
     display: flex;
-    height: 100px;
+    height: 70px;
     justify-content: space-between;
     align-items: center;
-    font-size: 25px;
+    font-size: 20px;
     background-color: #151320;
     border-radius: 15px;
-    border: 6px solid rgb(187, 14, 100);
-    box-shadow: inset 0 0 10px rgb(233, 42, 121),  0 0 20px rgb(233, 42, 121);
-    padding: 0,5em;
+    border: 3px solid rgb(187, 14, 100);
+    box-shadow: inset 0 0 10px rgb(233, 42, 121), 0 0 20px rgb(233, 42, 121);
     margin: 1rem;
 }
