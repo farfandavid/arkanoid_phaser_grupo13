@@ -6,7 +6,11 @@ import './App.css';
 import MenuPage from './pages/MenuPage';
 import Header from './components/Header';
 import ErrorPage from './pages/ErrorPage';
+<<<<<<< HEAD
 import ArkanoidF from './pages/arkanoidFarfan/ArkanoidFarfan';
+=======
+import ArkanoidRojas from './pages/Arkanoidrojas';
+>>>>>>> main
 
 //--------------------------//
 
@@ -20,7 +24,7 @@ function App() {
           <Route path='/' element={<MenuPage></MenuPage>} />
           <Route path='/ArkanoidF' element={<ArkanoidF></ArkanoidF>} />
           <Route path='/Juegos' />
-          <Route path='/Desarrolladores' />
+          <Route path='/Rojas' element={<ArkanoidRojas></ArkanoidRojas>} />
           <Route path='*' element={<ErrorPage />} />
         </Routes>
       </BrowserRouter>
