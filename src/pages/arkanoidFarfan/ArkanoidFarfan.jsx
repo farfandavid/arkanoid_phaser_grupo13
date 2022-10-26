@@ -3,6 +3,7 @@ import Phaser from "phaser";
 //import Preload from "./Preload";
 //import Play from "./Play";
 import Menu from "./Menu";
+import Play from "./Play";
 
 function ArkanoidF() {
 
@@ -20,7 +21,7 @@ function ArkanoidF() {
       velocidadInical: -200,
     };
 
-    const Escenas = [Menu];
+    const Escenas = [Menu, Play];
     const crearEscena = Scene => new Scene(CONFIGURACION);
     const iniciarEscena = () => Escenas.map(crearEscena);
 

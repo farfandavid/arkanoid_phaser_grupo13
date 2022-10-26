@@ -1,13 +1,17 @@
 import Phaser from "phaser";
+import Play from "./Play";
 
 class Menu extends Phaser.Scene {
 
   btn_play = null;
+  play = null;
+  scene = null;
 
   posicionInicialY = 300;
   posicionInicialX = 400;
   constructor() {
     super("Menu");
+    this.play = new Play();
   }
 
 
@@ -20,10 +24,11 @@ class Menu extends Phaser.Scene {
   create() {
     this.add.image(this.posicionInicialX, this.posicionInicialY, "background");
 
-    this.btn_play = this.add.sprite(400, 200, "play").setInteractive();
-    this.btn_play.on('pointerdown', function () {
-      console.log("Hola")
-    });
+    this.btn_play = this.add.image(400, 200, "play").setInteractive();
+
+    //this.scene.start("Play");
+
+
   }
 
   update() {
