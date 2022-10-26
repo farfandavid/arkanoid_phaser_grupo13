@@ -99,13 +99,13 @@ export class Escena extends Phaser.Scene{
         if(this.cursors.left.isDown){
             this.platforms.setVelocityX(-600);
             if(this.ball.getData('pegada')){
-                this.ball.setVelocityX(-500);
+                this.ball.setVelocityX(-600);
             }
         }
         else if(this.cursors.right.isDown){
             this.platforms.setVelocityX(600);
             if(this.ball.getData('pegada')){
-                this.ball.setVelocityX(500);
+                this.ball.setVelocityX(600);
             }
         }
         else{
