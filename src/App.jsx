@@ -6,6 +6,7 @@ import './App.css';
 import MenuPage from './pages/MenuPage';
 import Header from './components/Header';
 import ErrorPage from './pages/ErrorPage';
+import Arkanoid from './components/ArkanoidAmante/Arkanoid';
 
 //--------------------------//
 
@@ -17,7 +18,7 @@ function App() {
         <Header />
         <Routes>
           <Route path='/' element={<MenuPage />} />
-          <Route path='/Juegos' />
+          <Route path='/Juegos'element ={<Arkanoid />} />
           <Route path='/Desarrolladores' />
           <Route path='*' element={<ErrorPage />} />
         </Routes>
