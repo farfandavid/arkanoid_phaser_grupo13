@@ -7,6 +7,7 @@ import MenuPage from './pages/MenuPage';
 import Header from './components/Header';
 import ErrorPage from './pages/ErrorPage';
 import ArkanoidF from './pages/arkanoidFarfan/ArkanoidFarfan';
+import ArkanoidRojas from './pages/Arkanoidrojas';
 
 //--------------------------//
 
