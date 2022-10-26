@@ -9,7 +9,7 @@ export class RestartButton{
     }
 
     create(){
-        this.startButton = this.relatedScene.add.image(400,300, 'botonRestart');
+        this.startButton = this.relatedScene.add.image(400,350, 'botonRestart');
         this.startButton.on('pointerdown', () => {
             this.scene.start('Escena');
             console.log('entro');

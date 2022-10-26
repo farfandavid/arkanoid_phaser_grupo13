@@ -42,7 +42,7 @@ export class Escena extends Phaser.Scene{
             height: 1,
             cellWidth: 67,
             cellHeight: 34,
-            x: 100,
+            x: 250,
             y: 100
         }
     });
@@ -78,7 +78,7 @@ export class Escena extends Phaser.Scene{
         bloques.disableBody(true, true);
         this.TablaPuntaje.incrementoPuntaje(10);
         if(this.bloques.countActive() === 0){
-            this.ShowWin();
+            this.showNextLevel();
         }
     }
 
@@ -133,6 +133,8 @@ export class Escena extends Phaser.Scene{
     ShowWin(){
         this.scene.start('Win');
     }
-
+    showNextLevel(){
+        this.scene.start('NextLevel');
+    }
 }
 export default Escena;
