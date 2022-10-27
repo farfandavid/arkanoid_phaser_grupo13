@@ -8,7 +8,7 @@ export class Win extends Phaser.Scene {
     }
 
     preload() {
-        this.load.image('Ganaste', 'Rojas/img/Win.png');
+        this.load.image('Ganaste', 'assets/Win.png');
         this.RestartButton.preload();
     }
 

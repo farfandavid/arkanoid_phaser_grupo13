@@ -16,8 +16,8 @@ export class GameOver extends Phaser.Scene {
         console.log(this.currentScene);
     }
     preload() {
-        this.load.image('gameover', 'Rojas/img/gameover1.png');
-        this.load.image('botonRestart', 'Rojas/img/Restart.png');
+        this.load.image('gameover', 'assets/gameover1.png');
+        this.load.image('botonRestart', 'assets/Restart.png');
         //this.RestartButton.preload();
     }
 

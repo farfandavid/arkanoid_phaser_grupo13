@@ -7,9 +7,9 @@ export class Menu extends Phaser.Scene {
   }
 
   preload() {
-    this.load.image('fondo', 'Rojas/img/fondo.png');
-    this.load.image('play_btn', 'Rojas/img/play_btn.png');
-    this.load.image('load_btn', 'Rojas/img/load_btn.png');
+    this.load.image('fondo', 'assets/fondo.png');
+    this.load.image('play_btn', 'assets/play_btn.png');
+    this.load.image('load_btn', 'assets/load_btn.png');
   }
 
   create() {

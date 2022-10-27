@@ -7,9 +7,9 @@ export class Niveles extends Phaser.Scene {
   }
 
   preload() {
-    this.load.image('fondo', 'Rojas/img/fondo.png');
-    this.load.image('nivel_1', 'Rojas/img/nivel_1.png');
-    this.load.image('nivel_2', 'Rojas/img/nivel_2.png');
+    this.load.image('fondo', 'assets/fondo.png');
+    this.load.image('nivel_1', 'assets/nivel_1.png');
+    this.load.image('nivel_2', 'assets/nivel_2.png');
   }
 
   create() {

@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import Phaser from 'phaser';
-import { Escena } from '../components/rojasComponents/components/Escena';
-import { GameOver } from '../components/rojasComponents/components/GameOver';
-import { Win } from '../components/rojasComponents/components/Win';
-import { Escena2 } from '../components/rojasComponents/components/Escena2';
-import { NextLevel } from '../components/rojasComponents/components/NextLevel';
-import { Menu } from '../components/rojasComponents/components/Menu';
-import { Niveles } from '../components/rojasComponents/Niveles';
+import { Escena } from '../components/arkanoid/components/Escena';
+import { GameOver } from '../components/arkanoid/components/GameOver';
+import { Win } from '../components/arkanoid/components/Win';
+import { Escena2 } from '../components/arkanoid/components/Escena2';
+import { NextLevel } from '../components/arkanoid/components/NextLevel';
+import { Menu } from '../components/arkanoid/components/Menu';
+import { Niveles } from '../components/arkanoid/components/Niveles';
 
 function ArkanoidRojas() {
 

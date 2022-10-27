@@ -17,14 +17,14 @@ export class Escena extends Phaser.Scene {
     }
 
     preload() {
-        this.load.image('fondo', 'Rojas/img/fondo.png');
-        this.load.image('platform', 'Rojas/img/player.png');
-        this.load.image('pelota', 'Rojas/img/pelota.png');
-        this.load.image('bloqueRojo', 'Rojas/img/BloqueRojo.png');
-        this.load.image('bloqueCeleste', 'Rojas/img/BloqueCeleste.png');
-        this.load.image('bloqueMorado', 'Rojas/img/BloqueMorado.png');
-        this.load.image('bloqueNaranja', 'Rojas/img/BloqueNaranja.png');
-        this.load.image('bloqueRosado', 'Rojas/img/BloqueRosado.png');
+        this.load.image('fondo', 'assets/fondo.png');
+        this.load.image('platform', 'assets/player.png');
+        this.load.image('pelota', 'assets/pelota.png');
+        this.load.image('bloqueRojo', 'assets/BloqueRojo.png');
+        this.load.image('bloqueCeleste', 'assets/BloqueCeleste.png');
+        this.load.image('bloqueMorado', 'assets/BloqueMorado.png');
+        this.load.image('bloqueNaranja', 'assets/BloqueNaranja.png');
+        this.load.image('bloqueRosado', 'assets/BloqueRosado.png');
 
     }
 
