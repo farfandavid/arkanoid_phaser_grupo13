@@ -7,10 +7,15 @@ export class Escena2 extends Phaser.Scene{
         super({key: 'Escena2'});
     }
 
+    platforms = null;
+    cursors = null;
+
+    
+
     preload(){
-        this.load.image('fondo', 'Rojas/img/fondo.png');
+        this.load.image('fondo2', 'Rojas/img/1168051.png');
         this.load.image('platform', 'Rojas/img/player.png');
-        this.load.image('pelota', 'Rojas/img/pelota.png');
+        this.load.image('pelota2', 'Rojas/img/PlayerLevel2.png');
         this.load.image('bloqueRojo', 'Rojas/img/BloqueRojo.png');
         this.load.image('bloqueCeleste', 'Rojas/img/BloqueCeleste.png');
         this.load.image('bloqueMorado', 'Rojas/img/BloqueMorado.png');
@@ -23,33 +28,40 @@ export class Escena2 extends Phaser.Scene{
         //Con esto gestionaremos las colisiones que se produzcan.
         this.physics.world.setBoundsCollision(true, true, true, false);
         //Se agrega el fondo.
-        this.add.image(400,225, 'fondo');
-        //creamos la tabla del puntaje y asi visualizarlo.
+        this.add.image(400,225, 'fondo2');
         //Aqui agregaremos los bloques.
         this.bloques = this.physics.add.staticGroup({
         key: ['bloqueRojo', 'bloqueRosado','bloqueCeleste','bloqueNaranja','bloqueMorado'],
-        frameQuantity: 3,
+        frameQuantity: 10,
         gridAlign: {
             widht: 10,
             height: 5,
-            cellWidth: 67,
-            cellHeight: 34,
-            x: 100,
-            y: 100
+            cellWidth: 77,
+            cellHeight: 44,
+            x: 70,
+            y: 50
         }
     });
 
-     //Se agrega el personaje, sus fisicas y evitamos que caiga por la gravedad.
-     this.platforms = this.physics.add.image(400,400,'platform').setImmovable();
-     this.platforms.body.allowGravity = false; 
+        //Se agrega el personaje, sus fisicas y evitamos que caiga por la gravedad.
+        this.platforms = this.physics.add.image(400, 400, 'platform').setImmovable();
+        this.platforms.body.allowGravity = false;
 
-     //Agregamos la pelota con sus fisicas.
-     this.ball = this.physics.add.image(400,370 , 'pelota');
+        this.puntaje = 0;
 
-      //Aqui veremos si la pelota esta "pegada" a nuestro player.
-      this.ball.setData('pegada', true);
+        this.puntajeNivel2 = this.add.text(10,7, 'Puntos:' + this.puntaje ,{
+            fontSize: '20px',
+            fill: '#fff',
+            fontFamily: 'verdana, arial, sans-serif'
+        });
 
-      
+        //Agregamos la pelota con sus fisicas.
+        this.ball = this.physics.add.image(400, 370, 'pelota2');
+
+        //Aqui veremos si la pelota esta "pegada" a nuestro player.
+        this.ball.setData('pegada', true);
+
+
         //Le agregamos la colision a la pelota.
         this.physics.add.collider(this.ball, this.platforms, this.ImpactoPlataforma, null, this);
         this.physics.add.collider(this.ball, this.bloques, this.ImpactoBloque, null, this);
@@ -67,7 +79,7 @@ export class Escena2 extends Phaser.Scene{
     //En esta parte veremos si nuestra pelota impacta con los bloques y si es asi los bloques desaparecen. Tambien comprobamos si la cantidad de bloques es 0 entonces se muestra la escena de victoria.
     ImpactoBloque(ball,bloques) {
         bloques.disableBody(true, true);
-        //this.TablaPuntaje.incrementoPuntaje(10);
+        this.AumentarPuntaje(10);
         if(this.bloques.countActive() === 0){
             this.ShowWin();
         }
@@ -83,7 +95,11 @@ export class Escena2 extends Phaser.Scene{
         }
     }
 
+    AumentarPuntaje(puntos){
+        this.puntaje += puntos;
+        this.puntajeNivel2.setText('Puntos:' + this.puntaje);
 
+    }
 
 
 
