@@ -1,17 +1,20 @@
 import Phaser from 'phaser';
-import { Button } from './example';
-import { RestartButton } from '../components/boton-Restart';
+import { Button } from './BotonRestart';
 
 export class GameOver extends Phaser.Scene {
 
     currentScene = null;
-    
-    constructor(currentScene) {
+
+    constructor() {
         super({ key: 'gameover' });
-        this.currentScene = currentScene;
         //this.RestartButton = new RestartButton(this);
     }
 
+    init(data) {
+        //console.log(this.init, data);
+        this.currentScene = data.escena;
+        console.log(this.currentScene);
+    }
     preload() {
         this.load.image('gameover', 'Rojas/img/gameover1.png');
         this.load.image('botonRestart', 'Rojas/img/Restart.png');
@@ -20,9 +23,9 @@ export class GameOver extends Phaser.Scene {
 
     create() {
 
+
         const actionOnClick = () => {
-            this.scene.start('Escena')
-            //console.log('click')
+            this.scene.start(this.currentScene);
         }
         this.add.image(400, 225, 'fondo');
 
@@ -38,4 +41,5 @@ export class GameOver extends Phaser.Scene {
 
 
     }
+
 }

@@ -1,10 +1,12 @@
 import Phaser from 'phaser';
 import { TablaPuntaje } from '../components/TablaPuntaje';
+import { GameOver } from './GameOver';
 
 export class Escena extends Phaser.Scene {
 
     constructor() {
         super({ key: 'Escena' });
+
     }
 
     platforms = null;
@@ -128,7 +130,7 @@ export class Escena extends Phaser.Scene {
     }
 
     showGameOver() {
-        this.scene.start('gameover');
+        this.scene.start('gameover', { escena: 'Escena' });
     }
     ShowWin() {
         this.scene.start('Win');

@@ -1,26 +1,24 @@
 import Phaser from 'phaser';
-import { RestartButton } from '../components/boton-Restart';
 
 
-export class Win extends Phaser.Scene{
+export class Win extends Phaser.Scene {
 
-    constructor(){
-        super({key:'Win'});
-        this.RestartButton = new RestartButton(this);
+    constructor() {
+        super({ key: 'Win' });
     }
 
-    preload(){
+    preload() {
         this.load.image('Ganaste', 'Rojas/img/Win.png');
         this.RestartButton.preload();
     }
 
-    create(){
-        this.add.image(400,225, 'fondo');
+    create() {
+        this.add.image(400, 225, 'fondo');
 
         this.RestartButton.create();
         this.GanasteImage = this.add.image(400, 125, 'Ganaste');
-        this.input.on('pointerdown',() =>{
-            this.scene.start('Escena');
+        this.input.on('pointerdown', () => {
+            this.scene.start('menu');
         });
 
     }
