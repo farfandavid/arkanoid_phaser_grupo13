@@ -36,7 +36,7 @@ export class Escena extends Phaser.Scene{
         //Aqui agregaremos los bloques.
         this.bloques = this.physics.add.staticGroup({
         key: ['bloqueRojo', 'bloqueCeleste','bloqueMorado','bloqueNaranja','bloqueRosado'],
-        frameQuantity: 2,
+        frameQuantity: 1,
         gridAlign: {
             widht: 10,
             height: 1,

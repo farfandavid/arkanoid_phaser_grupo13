@@ -4,8 +4,11 @@ import { RestartButton } from '../components/boton-Restart';
 
 export class GameOver extends Phaser.Scene {
 
-    constructor() {
+    currentScene = null;
+    
+    constructor(currentScene) {
         super({ key: 'gameover' });
+        this.currentScene = currentScene;
         //this.RestartButton = new RestartButton(this);
     }
 
