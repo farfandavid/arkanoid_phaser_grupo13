@@ -3,6 +3,8 @@ import Phaser from 'phaser';
 import {Escena} from '../components/rojasComponents/components/Escena';
 import { GameOver } from '../components/rojasComponents/components/GameOver';
 import { Win } from '../components/rojasComponents/components/Win';
+import { Escena2 } from '../components/rojasComponents/components/Escena2';
+import { NextLevel } from '../components/rojasComponents/components/NextLevel';
 
 function ArkanoidRojas(){
 
@@ -19,7 +21,7 @@ function ArkanoidRojas(){
                 arcade: {
                 }
             },
-            scene:[Escena, GameOver, Win],
+            scene:[Escena, GameOver, Win, Escena2, NextLevel],
             
             scale: {
                 autoCenter: Phaser.Scale.CENTER_HORIZONTALLY

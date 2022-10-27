@@ -1,6 +1,10 @@
-export class RestartButton{
+import Phaser from "phaser";
+import { Button } from "./example";
+export class RestartButton {
 
-    constructor(scene){
+    constructor(scene) {
+        //super(scene)
+        //scene.add.existing(this)
         this.relatedScene = scene;
     }
 
@@ -8,11 +12,15 @@ export class RestartButton{
         this.relatedScene.load.image('botonRestart', 'Rojas/img/Restart.png');
     }
 
-    create(){
-        this.startButton = this.relatedScene.add.image(400,300, 'botonRestart');
+    create() {
+        this.startButton = this.relatedScene.add.image(400, 350, 'botonRestart');
         this.startButton.on('pointerdown', () => {
-            this.scene.start('Escena');
+            //this.scene.start('Escena');
             console.log('entro');
         });
+
+
     }
+
+
 }
