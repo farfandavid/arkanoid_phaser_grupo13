@@ -13,9 +13,7 @@ function Header() {
             <div className='menu'>
                 <h1 className='titulo'>Grupo 13</h1>
                 <div className='caja'>
-                    <Link className='link' to="/ArkanoidF"><p>Arkanoid Farfan</p></Link>
-                    <Link className='link' to="/Juegos"><p>Arkanoid Amante</p></Link>
-                    <Link className='link' to="/Rojas"><p>Arkanoid Rojas</p></Link>
+                    <Link className='link' to="/Rojas"><p>Arkanoid</p></Link>
                 </div>
             </div>
         </header>
