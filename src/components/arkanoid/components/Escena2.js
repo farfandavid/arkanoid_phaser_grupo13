@@ -33,7 +33,7 @@ export class Escena2 extends Phaser.Scene {
         //Aqui agregaremos los bloques.
         this.bloques = this.physics.add.staticGroup({
             key: ['bloqueRojo', 'bloqueCeleste', 'bloqueMorado', 'bloqueNaranja', 'bloqueRosado'],
-            frameQuantity: 10,
+            frameQuantity: 1,
             gridAlign: {
                 widht: 10,
                 height: 5,
@@ -76,7 +76,7 @@ export class Escena2 extends Phaser.Scene {
         bloques.disableBody(true, true);
         this.TablaPuntaje.incrementoPuntaje(10);
         if (this.bloques.countActive() === 0) {
-            this.showNextLevel();
+            this.ShowWin();
         }
     }
 
@@ -127,9 +127,6 @@ export class Escena2 extends Phaser.Scene {
         this.scene.start('gameover', { escena: 'Escena2' });
     }
     ShowWin() {
-        this.scene.start('Win');
-    }
-    showNextLevel() {
         this.scene.start('Win');
     }
 

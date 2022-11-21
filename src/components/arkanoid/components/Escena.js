@@ -1,6 +1,5 @@
 import Phaser from 'phaser';
 import { TablaPuntaje } from '../components/TablaPuntaje';
-import { GameOver } from './GameOver';
 
 export class Escena extends Phaser.Scene {
 
