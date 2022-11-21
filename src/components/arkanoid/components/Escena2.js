@@ -20,6 +20,7 @@ export class Escena2 extends Phaser.Scene {
         this.load.image('bloqueMorado', 'assets/BloqueMorado.png');
         this.load.image('bloqueNaranja', 'assets/BloqueNaranja.png');
         this.load.image('bloqueRosado', 'assets/BloqueRosado.png');
+        this.load.audio('sfx', 'assets/sonidos/musica2.mp3');
 
     }
 
@@ -30,6 +31,12 @@ export class Escena2 extends Phaser.Scene {
         this.add.image(400, 225, 'fondo');
         //creamos la tabla del puntaje y asi visualizarlo.
         this.TablaPuntaje.create();
+
+        this.music = this.sound.add('sfx');
+        // //Aqui haremos que la musica se reproduzca
+         this.music.play({
+             loop: true
+         }); 
         //Aqui agregaremos los bloques.
         this.bloques = this.physics.add.staticGroup({
             key: ['bloqueRojo', 'bloqueCeleste', 'bloqueMorado', 'bloqueNaranja', 'bloqueRosado'],
@@ -76,6 +83,7 @@ export class Escena2 extends Phaser.Scene {
         bloques.disableBody(true, true);
         this.TablaPuntaje.incrementoPuntaje(10);
         if (this.bloques.countActive() === 0) {
+            this.music.stop({});
             this.ShowWin();
         }
     }
@@ -113,6 +121,7 @@ export class Escena2 extends Phaser.Scene {
         //Con esta linea de codigo haremos que si la posicion de la pelota es menor al limite del juego se muestre la pantalla de Game Over.
         if (this.ball.y > 500) {
             console.log('fin');
+            this.music.stop({});
             this.showGameOver();
         }
         //En esta parte veremos si la tecla(de la flecha hacia arriba) fue presionada esta lanzara la pelota.
